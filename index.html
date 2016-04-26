@@ -1,4 +1,163 @@
-hello world 
+git：工具
+	
+	作用：版本控制，可以对我们的代码进行版本管理，可以回到每个时间段的状态，丢失了也可以还原，多人协作冲突问题，历史记录
+	github:
+	有很多开源项目，可以看到最新动态，是否可以参与到jquery的bug的修改，远程仓库
+	
+	
+	
+	svn与git的区别
+	
+	svn                  git
+	
+	集成式				分布式
+	
+	一个服务器			多个服务器
+	
+	github的安装
+	不同系统，方式不同，
+	windows
+	1.从官网下载：下载完毕有两个一个是可视化，另一个是命令行（推荐）
+	2.git clone drag
+	
+	github和git上的用户名和邮箱最好一样，方便别人查看
+	3. 设置全局用户名和邮箱
+		git config --global user.name 'yousi2016'
+		git config --global user.name 'dingyousi888@gmail.com'
+	
+		查看：git config --global user.name
+			 git config --global user.email
+		修改：可以删掉drag文件夹里面的东西，重新clone，重新设置邮箱和用户名
+		
+		查看git下面所有的配置：git config --list
+		master:是drag项目下主分支的默认名字
+		假设主分支是一个稳定的版本，要想开发新的版本，如果直接在主分支开发，万一出问题不好解决，很麻烦，所以就在主分支上开一个子分支，和主分支长的一样，然后在子分支上开发新版本，经过测试没有问题了，再合并到主分支上，就可以形成下一个稳定的版本
+		
+		
+		
+	git工作的三个区域：
+	1.工作区：有.git的区域
+	2.暂存区：相当于备份
+	3.版本区:(版本库)
+		
+	git命令：
+	
+	1.git status:查看工作区和暂存区的状态，进行后续的操作
+	
+											                          红色代表工作区，绿色代表暂存区，如果没有红色的了，那么工作区就干净了
+	//文件前面有蓝色'+'（只有第一次前面有加号，以后修改都是红底白色叹号）					   添加了2个新文件	  0个修改  0个删除 冲突1个
+	2.git add:将工作区的文件添加到暂存区                                         [master    +2          ~0      -0    !1 | +1   ~0   -0     !]
+	git add . 将工作区的文件全部添加到暂存区,只要文件修改，那么就要重复 git add 和 git commit
+	//文件前面有绿底白色对勾
+	//撤回到工作区：git reset HEAD demo1.html
+	//git add 和git commit同时进行的命令：git commit -a 
+	3.git commit:将暂存区的文件提交到版本库中 添加注释命令：git commit -m 'change demo1.html'
+	回车弹出记事本：让我们添加注释的，版本库就会记录前面设置的用户名邮箱注释，谁提交的要干什么，最好用英文，关闭后自动出现命令行
+	暂存区文件全部提交到版本库中了
+	
+	git diff:   工作区和暂存区之间的对比
+	git diff --cached(--staged):暂存区和版本区之间的对比
+	git checkout -- :工作区撤销到版本区
+	
+	git commit --amend:误提交后，想撤回重新提交到版本区（本地仓库）
+	
+	
+	
+	删除命令：
+	
+	git rm 删除暂存区的文件（但是必须先手动删除工作区的对应的文件）
+	
+	git rm -f：同时删除工作区和暂存区的同一个文件
+	
+	git rm --cached 只是删除暂存区的文件
+	
+	
+	
+	
+	恢复命令：（是指git的三个区都恢复到同一个版本，三个区的文件完全一样（同步），前面有绿底白勾，）
+	
+		git checkout (版本id) （文件名称）：恢复到具体某一个文件
+						//id：最少4位才行
+		git reset --hard (版本id):恢复到指定的版本
+		
+		git reset --hard HEAD^:向前返回一个版本
+		
+		git reset --hard HEAD~(N):向前返回N个版本
+	
+	    git reflog:打出前面操作的每一次的行为，根据版本id，再使用git reset --hard (版本id)这样就会返回到最近一次提交的版本
+		
+		
+		
+		
+		
+	本地仓库（就是git的版本区）同步到远程仓库
+	
+		git remote：查看远程仓库的名字（也可以修改git remote add）
+		
+		git remote -v:查看远程仓库的地址
+		
+		git push origin master:将本地仓库同步到远程仓库（github上）的主分支上
+		
+		其他人可以下载你上传的文件，但是下载完毕其他人又要上传就要得到你提供的一个权限
+
+		git fetch:下载下来得手动合并（用这种先查看冲突然后合并）
+		git diff master origin/master:查看冲突
+		git merge origin/master:手动合并的时候，页面会出现下面的，然后人为取舍
+		<<<<<<< HEAD
+#div1{width:400px;height:400px; background:red;}
+=======
+#div1{width:300px;height:300px; background:blue;}
+>>>>>>> origin/master
 
 
-yousi2016
+
+		git pull origin master：下载下来自动合并
+		
+		很大的开源项目协作步骤：
+		
+		1.fork:开了一个新的分支，或者说clone下（镜像了一个版本）了一个版本放到当前用户名下，测试没有问题了
+		2.pull request:向有权限的发起人提交请求，然后此人就会首先检查你的代码，如果没有问题，就会merge到自己的库中，如果有问题，就会恢复你，就不会合并
+		因为有很多人修改你发起的开源的项目恢复的时候引用作者所说的话
+		
+		3 删除仓库的小心delete，镜像的还可以，自己的小心
+			
+	
+		
+		git分支(master new1  new2,每一个分支都有三个分区：工作区，暂存区，版本区)
+		
+			1.创建分支：git branch new1
+			2.查看分支：git branch
+			3.切换分支：git checkout master
+			4.快速创建和切换分支：git checkout -b new1
+			5.查看与当前分支合并的分支情况：git branch --merged
+			6.查看与当前分支没有合并的分支情况：git branch --no-merged
+			7.删除已经合并的无用的分支：git branch -d new1
+			8.删除没有合并分支：git branch -D new
+			9.如果主分支master和一个子分支new1修改提交的是同一个地方，就会产生冲突
+			<<<<<<< HEAD
+			obj.style.left = ev.pageX - disX + 'px';
+			obj.style.top = ev.pageY - disY + 'px';
+			=======
+			obj.style.left = ev.clientX - disX + 'px';
+			obj.style.top = ev.clientY - disY + 'px';
+			>>>>>>> new1
+			
+			这样就好手动选择
+			
+		github上的分支：
+		
+		 	1.创建一个new1分支上传到远程仓库：git push origin new1
+			2.github上面直接创建
+		打一个标签（或者版本出来）
+		git tag v1.0打一个版本
+		git tag 查看版本
+		git push origin v1.0:上传到github
+		
+		创建博客：
+		github上面可以用免费的域名和空间
+		eg:http://jquery.github.io/:jquery博客
+		
+		https://pages.github.com/:介绍如何创建博客的
+		
+		自己的仓库的名字：yousi2016.github.io
+		自己的博客：http://yousi2016.github.io
