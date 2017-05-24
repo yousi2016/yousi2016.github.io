@@ -1,0 +1,94 @@
+1、同域下的iframe自适应高度
+<iframe src="url" id="Iframe" frameborder="0" scrolling="no" style="border:0px;width:1000px;" onload="autoHeight();"></iframe>
+<script type="text/javascript">
+    function autoHeight(){
+        var iframe = document.getElementById("Iframe");
+        if(iframe.Document){//ie自有属性
+            iframe.style.height = iframe.Document.documentElement.scrollHeight;
+        }else if(iframe.contentDocument){//ie,firefox,chrome,opera,safari
+            iframe.height = iframe.contentDocument.body.offsetHeight ;
+        }
+    }
+</script>
+
+2、跨域下的iframe自适应高度
+// url1中包含iframe:
+<iframe src="http://www.baidu.com/url2" id="Iframe" frameborder="0" scrolling="no" style="border:0px;"></iframe>
+
+// 在url2中加入如下代码：
+<iframe id="c_iframe"  height="0" width="0"  src="http://www.studyofnet.com/url11" style="display:none" ></iframe>
+<script type="text/javascript">
+    (function autoHeight(){
+        var b_width = Math.max(document.body.scrollWidth,document.body.clientWidth);
+        var b_height = Math.max(document.body.scrollHeight,document.body.clientHeight);
+        var c_iframe = document.getElementById("c_iframe");
+        c_iframe.src=\\'#\\'" 
+    })();
+</script>
+
+// 最后，agent.html中放入一段js:
+<script type="text/javascript">
+    var b_iframe = window.parent.parent.document.getElementById("Iframe");
+    var hash_url = window.location.hash;
+    if(hash_url.indexOf("#")>=0){
+        var hash_width = hash_url.split("#")[1].split("|")[0]+"px";
+        var hash_height = hash_url.split("#")[1].split("|")[1]+"px";
+        b_iframe.style.width = hash_width;
+        b_iframe.style.height = hash_height;
+    }
+</script>
+
+3.解决2个汉字和4个汉字的两端对齐
+letter-spacing:2em;
+
+4/*针对移动端的*/
+	@media only screen and (max-width: 768px) {
+		
+	}
+	
+5做移动端的得将iframe的width="100%"
+6pc端的页面内容不能修改，只能在每一个模板页面修改移动端的样式
+
+
+
+8.overflow:hidden;zoom:1可以解决ie6/7/9清除浮动，从而不会导致margin-bottom加倍
+但是.clearfix:after{
+	     content:".";        
+	     display:block;        
+	     height:0;        
+	     clear:both;        
+	     visibility:hidden;        
+	
+	} 
+	对ie6/7/9清除浮动不起作用，必须加上
+.clearfix{zoom:1;}
+
+9 元素在ie浏览器下面背景颜色看不到的哦，因为你自己设置成豆沙绿的了，将所有背景都覆盖了啊
+
+10.注意jquery版本的影响
+
+11.判断移动端
+if ($(window).width()<768) {
+		
+		show.animate({
+            marginLeft: -(width) * i
+        });
+	}else{
+		
+		show.animate({
+            marginLeft: -(width+18) * i
+        });
+	}
+
+
+
+
+17:解决ie6/7iframe出现横向滚动条的问题
+给iframe的子页面添加样式：html{overflow-x:hidden;}
+
+   
+19去掉iframe可恶的ie8下的边框frameborder="no" border="0"
+
+20.jquery2.0以上不支持ie6/7/8
+
+21.移动端出现诡异现象，可能是引入的bootstrap和iframe的结构引起的，可以精简结构标签
