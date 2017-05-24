@@ -1,0 +1,102 @@
+
+一.SublimeServer安装方法:
+
+
+1.如果你使用Sublime Text作为你的编辑器，那么在进行HTML和Javascript开发的时候有一个很有用的功能，帮你完成前端的联调测试，那就是Sublime Text的服务器插件：SublimeServer。使用了该插件后，你不在需要单独的启动Tomcat或者Apache这样的重型服务器，就可以完成HTML和Javascript在服务器的联调。SublimeServer会启动一个轻量级的，静态的WEB服务器，让你在文本编辑器中直接启动服务器，并进行测试联调。安装方法也很简单：
+
+1、Ctrl + Shift +P，启动Sublime Text的命令行
+
+2、输入Install Package打开插件安装命令
+
+
+
+3、输入SublimeServer找到Sublime Text的服务器插件，回车直接安装即可
+
+
+
+4、安装完成后，点击工具选项，就可以看到SublimeServer工具了，然后点击Settings，查看SublimeServer的基本配置，这里可以修改服务器端口，文件扩展名等
+
+
+
+5、查看好设定后，点击Start SublimeServer，就可以启动服务器了
+
+
+
+6、注意：SublimeServer要求你的代码文件夹，要添加到Sublime Text的项目里面，这样才能列出这些文件夹。
+
+
+
+
+
+
+二.使用最新版wampserver搭建 WAMP 平台超简单实用教程:
+
+首先想说一下通常搭建WAMP平台的时候主要分为散装包搭建和集成包搭建过程。
+
+　　散装包搭建就是把PHP，Apache，MySQL等下载下来，一个个的安装，其过程灰常的复杂，而且需要配置的系统变量和修改的文件太多，不适合新手以及对系统定制要求不高的人使用。
+
+　　集成包主要是使用wampserver进行安装，该包封装较好，自动集成了以上的程序，简化了操作过程，使用起来灰常方便，官方下载地址：
+
+　　http://www.wampserver.com/en/download.php 
+
+　　里面提供最新的版本下载，一般比中文网站上的版本要高级。下面以笔者写作日期为止的最新版本的安装过程进行演示：
+
+　　１、到上述网站上下载最新的版本，本文下载到的最新版本是：WampServer2.1e-x32.exe
+
+2011年 最新版 WAMP 平台超简单搭建教程 - vipscu - vipscu show
+
+ 上图中红色框内可以看到关于wampserver内包含的组件的相关信息
+
+　　2、下载完毕之后，运行安装程序。安装的过程基本上就和安装普通软件的过程一致，不确定的地方选择默认的值便可以了。
+
+　　3、安装完毕后会有提示是否现在运行的选项，选择立即运行，默认情况是离线的——也就是其他主机还不可以访问你搭建的服务器，但是本机可以访问。顺便说一下，安全起见，如果仅仅是个人开发，最好是不要让服务器在线，因为诸多的安全问题。
+
+　　4、打开浏览器，输入：http://localhost/ 然后可以看到如下页面说明安装初步成功。
+
+2011年 最新版 WAMP 平台超简单搭建教程 - vipscu - vipscu show
+
+　　5、点击上图Tools栏目中的“phpinfo（）”可以查看PHP的详细配置信息；点击“phpmyadmin”可以使用其管理界面对数据库进行管理！下面Your Aliases中的三个均是对wamp的管理分析控制界面，前两个都是对数据库进行讲解的，最后一个是用来对PHP程序进行分析的。
+
+　　6、完成以上界面就基本上搭建好了平台了，可以使用相关的选项进行查看，如下图：
+
+2011年 最新版 WAMP 平台超简单搭建教程 - vipscu - vipscu show
+
+　　7、以后你自己做的PHP文件就放在www directory下就可以了。例如：点击上图中的“www directory”，打开目录：删除掉原来的index.php,再在里面用记事本新建一个文件，在里面输入：
+
+<?php
+echo "这是一个主页文件！";
+?>
+
+　　选择另存为，将文件的名字修改为index.php，并且选择保存的默认格式修改为是UTF-8格式，默认的是ANSI编码格式——使用这个格式会出现乱码，因为wampserver采用的是UTF-8编码方式。
+
+　　8、重新启动wampserver，然后访问http://localhost/，发现页面中显示文字如下：
+
+　　这是一个主页文件！
+
+　　自此，wamp平台算是基本搭建成功。以下是一些较为高级的配置操作。
+
+　　
+
+ 
+
+2011年 使用最新版wampserver搭建 WAMP 平台超简单实用教程 - vipscu - vipscu show
+
+ 　　修改如上图中的，httpd.conf文件，中的ServerName localhost:80，可以修改访问的端口，修改后别人访问你的服务器的时候就需要特别指明端口号。
+
+　　修改DocumentRoot “。。。/wamp/www/”和<Directory “。。。wamp/www/“>这个栏目，可以修改为你想要的相关路径，以后你的php文件就放到你设置的路径里就可以了。
+
+　　更全面的修改相关路径的该法请参见（不过作为开发改到此步已经基本满足要求了）：
+
+http://hi.baidu.com/vfoxer/blog/item/ce5c81d48a2b7e12a18bb71f.html
+
+　　自此，本文搭建WAMP平台的基本配置结束，希望对您有所帮助。
+
+　　本文本人亲自测试通过，不过有朋友反映有问题，他解决的说法是：
+
+　　1、清楚缓存（IE的。貌似和我无关吧，我以前开发的时候就把IE缓存禁用了，这个。。。）
+
+　　2、进入php.ini修改password与mysql一样，数据库的连接密码，
+
+　　PS:MySQL 的默认用户是root，密码为空。
+
+
