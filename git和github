@@ -37,7 +37,19 @@ git：工具
 	2.git clone drag
 	
 	github和git上的用户名和邮箱最好一样，方便别人查看
-	3. 设置全局用户名和邮箱
+	3.
+	创建版本库：repository
+		
+		1.切换到项目文件夹下：$ cd wamp/www/myProject
+		2.创建一个仓库（版本库=空文件夹=空目录）$ mkdir learngit
+		3.切换到仓库：$ cd learngit
+		4.当前所处的目录: $ pwd
+			wamp/www/myProject/learngit
+		5.通过git init命令把这个目录变成Git可以管理的仓库：
+		$ git init
+		Initialized empty Git repository in D:/wamp/www/myProject/learngit/.git/
+
+	设置全局用户名和邮箱
 		git config --global user.name 'yousi2016'
 		git config --global user.name 'dingyousi888@gmail.com'
 	
