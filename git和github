@@ -15,19 +15,11 @@ http://www.oschina.net/p/f2e-node-server/similar_projects?sort=view&lang=21
 GitHub简介
 http://symfony.cn/articles/github-intro.html
 
-
-
-https://github.com/yousi2016/drag.git
-
-
-
 git：工具
 	
 	作用：版本控制，可以对我们的代码进行版本管理，可以回到每个时间段的状态，丢失了也可以还原，多人协作冲突问题，历史记录
 	github:
 	有很多开源项目，可以看到最新动态，是否可以参与到jquery的bug的修改，远程仓库
-	
-	
 	
 	
 	svn与git的区别
