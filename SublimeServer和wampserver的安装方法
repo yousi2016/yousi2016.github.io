@@ -81,6 +81,12 @@ echo "这是一个主页文件！";
 
 2011年 使用最新版wampserver搭建 WAMP 平台超简单实用教程 - vipscu - vipscu show
     如果80端口被IIS7占用的话，得先关闭IIS7,可以用别的端口ServerName localhost:888
+    修改端口号先找到D:\wamp\bin\apache\apache2.4.9\conf下面的httpd.conf文件，打开后修改里面的
+    
+    Listen 0.0.0.0:888
+    Listen [::0]:888
+    ServerName localhost:888
+    
  　　修改如上图中的，httpd.conf文件，中的ServerName localhost:80，可以修改访问的端口，修改后别人访问你的服务器的时候就需要特别指明端口号。
 
 　　修改DocumentRoot “。。。/wamp/www/”和<Directory “。。。wamp/www/“>这个栏目，可以修改为你想要的相关路径，以后你的php文件就放到你设置的路径里就可以了。
