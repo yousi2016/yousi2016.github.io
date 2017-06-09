@@ -1,0 +1,24 @@
+1.先建立文件夹D:\dev\nvm和D:\dev\nodejs
+
+2.先安装nodejs
+    下载地址：http://nodejs.org/zh-cn/
+
+3.nvm安装步骤：
+    下载地址：https://github.com/coreybutler/nvm-windows/releases
+    cmd 运行 nvm -h
+
+4.nvm配置淘宝镜像（下载更快）
+    修改D:\dev\nvm\setting.txt
+    root: D:\dev\nvm
+    path: D:\dev\nodejs
+    node_mirror:http://npm.taobao.org/mirrors/node/
+    npm_mirror:https://npm.taobao.org/mirrors/npm/
+   
+5.通过nvm安装某版本的nodejs集（node npm（nodejs包管理工具））
+    64位系统：cmd运行nvm install 6.9.2
+    32位系统：cmd运行nvm install 6.9.232
+  注意：其中6.9.2表示安装的node版本为6.9.2，这里npm是包含在node中的不需要单独安装
+
+6、安装
+
+    
