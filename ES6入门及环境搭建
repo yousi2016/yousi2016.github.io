@@ -45,9 +45,16 @@
         ES6语法支持度：IE9为0%；IE11位11%；chrome56位97%。
  
  10.ES6到ES5的转换
-        #使用Babel完成ES6到ES5的转换
-        #使用npm创建一个nodejs工程步骤：
-            1.##mkdir命令用来创建目录
+        1.使用Babel完成ES6到ES5的转换
+        2.使用npm创建一个nodejs工程步骤：
+            1.mkdir命令用来创建目录:mkdir rnlesson1
+            2.进到刚创建的文件夹的下面：cd rnlesson1
+            3.在项目中引导创建一个package.json文件:npm init 
+                然后一路按回车键就行
+            4.通过webstorm打开rnlesson1这个项目File->Open
+            5.使用webstorm编写ES6代码
+            6.webstorm配置支持ES6语法规则
+                settings->Languages & frameworks->JavaScript
 
 
         
