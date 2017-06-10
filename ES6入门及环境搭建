@@ -24,7 +24,33 @@
 7.先打印出node版本列表：node list
   切换node版本：nvm use 6.9.2
   
+8.npm 设置淘宝镜像（下载更快）
+  cmd:npm config set registry https://registry.npm.taobao.org
   
+9.在不同的环境中使用ES6
+    1.在nodejs环境中运行ES6
+        c:\Users\wangze>node
+        >let school='1111';
+        undefined
+        >console.log(school);
+        1111
+        undefined
+    2.在chrome56（64bit）浏览器中运行ES6
+        let a='222';
+        undefined
+        console.log(a);
+        222
+        undefined
+    3.IE9和IE11都不支持ES6的语法
+        ES6语法支持度：IE9为0%；IE11位11%；chrome56位97%。
+ 
+ 10.ES6到ES5的转换
+        #使用Babel完成ES6到ES5的转换
+        #使用npm创建一个nodejs工程步骤：
+            1.##mkdir命令用来创建目录
+
+
+        
     
 
     
