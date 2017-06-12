@@ -43,7 +43,7 @@
         222
         undefined
     3.IE9和IE11都不支持ES6的语法
-        ES6语法支持度：IE9为0%；IE11位11%；chrome56位97%。
+        ES6语法支持度：IE9为0%；IE11为11%；chrome56为97%。
  
  10.ES6到ES5的转换
         1.使用Babel完成ES6到ES5的转换
