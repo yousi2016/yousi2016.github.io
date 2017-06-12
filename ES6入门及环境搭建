@@ -28,6 +28,8 @@
 8.npm 设置淘宝镜像（下载更快）
   cmd:npm config set registry https://registry.npm.taobao.org
   
+ 教程： http://www.cnblogs.com/PeunZhang/p/5553574.html
+ 
 9.在不同的环境中使用ES6
     1.在nodejs环境中运行ES6
         c:\Users\wangze>node
