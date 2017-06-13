@@ -57,14 +57,18 @@
             4.通过webstorm打开rnlesson1这个项目File->Open
             5.使用webstorm编写ES6代码
             6.webstorm配置支持ES6语法规则
-                settings->Languages & frameworks->JavaScript->ES6
+                ctrl+alt+s ->settings->Languages & frameworks->JavaScript->ES6
             7.babel全局安装：npm install -g babel-cli
             8.安装转换插件：（此插件定义了ES2015转码规则，相当于是字典的功能）
-                npm install babel-preset-es2015-save
-                npm install --save-dev babel-preset-es2015
+                npm install babel-preset-es2015 --save或者npm install --save babel-preset-es2015
+                
+                
 
-            9.cmd 命令行转换ES6到ES5
+            9.cmd 命令行转换ES6到ES5并且创建一个es5.js文件
                babel es6.js --out-file es5.js--presets es2015
+               
+               只在命令里面打印出编译后的es5的代码
+               babel es6.j --presets es2015
 
 
         
