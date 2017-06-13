@@ -48,7 +48,23 @@ git：工具
 		5.通过git init命令把这个目录变成Git可以管理的仓库：
 		$ git init
 		Initialized empty Git repository in D:/wamp/www/myProject/learngit/.git/
+		
+		6.查看结果随时掌握工作区的状态：git status
+		
+		7.查看difference(可以查看修改内容)：  git diff readme.txt 
+		
+		8.像这样，你不断对文件进行修改，然后不断提交修改到版本库里，就好比玩RPG游戏时，每通过一关就会自动把游戏状态存盘，如果某一关没过去，你还可以选择读取前一关的状态。有些时候，在打Boss之前，你会手动存盘，以便万一打Boss失败了，可以从最近的地方重新开始。Git也是一样，每当你觉得文件修改到一定程度的时候，就可以“保存一个快照”，这个快照在Git中被称为commit。一旦你把文件改乱了，或者误删了文件，还可以从最近的一个commit恢复，然后继续工作，而不是把几个月的工作成果全部丢失。
 
+		现在，我们回顾一下readme.txt文件一共有几个版本被提交到Git仓库里了：
+		
+		9.查看历史记录：git log（git log命令显示从最近到最远的提交日志）
+		
+		10.如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数：git log --pretty=oneline
+		commit id（版本号）			
+		adbdf1a84375fdd42949fab4c3158bacf170fc49   append GPL
+		fac7e0f67ae6983e841652ebb98e9c5c5fdc4338   write me a readme.txt
+
+		
 	设置全局用户名和邮箱
 		git config --global user.name 'yousi2016'
 		git config --global user.name 'dingyousi888@gmail.com'
