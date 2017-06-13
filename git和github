@@ -63,7 +63,26 @@ git：工具
 		commit id（版本号）			
 		adbdf1a84375fdd42949fab4c3158bacf170fc49   append GPL
 		fac7e0f67ae6983e841652ebb98e9c5c5fdc4338   write me a readme.txt
-
+		
+		11.准备把readme.txt回退到上一个版本:git reset --hard HEAD^
+			
+			回退到上上一个版本：git reset --hard HEAD^^
+		
+			回退到100个版本 ：git reset --hard HEAD~100
+		
+		12.看看readme.txt的内容
+			cat readme.txt
+		
+		13.指定回到原来某个版本：git reset --hard 
+		
+		14.用来记录你的每一次命令：git reflog
+			adbdf1a HEAD@{0}: reset: moving to adbdf1a843
+			fac7e0f HEAD@{1}: reset: moving to fac7e0f67ae
+			adbdf1a HEAD@{2}: reset: moving to adbdf1a
+			fac7e0f HEAD@{3}: reset: moving to HEAD^
+			adbdf1a HEAD@{4}: commit: append GPL
+			fac7e0f HEAD@{5}: commit (initial): write me a readme.txt
+		15.然后就可以回退到指定版本：git reset --hard adbdf1a
 		
 	设置全局用户名和邮箱
 		git config --global user.name 'yousi2016'
@@ -103,10 +122,7 @@ git：工具
 	git diff --cached(--staged):暂存区和版本区之间的对比
 	git checkout -- :工作区撤销到版本区
 	
-	git commit --amend:误提交后，想撤回重新提交到版本区（本地仓库）
-	
-	
-	
+	git commit --amend:误提交后，想撤回重新提交到版本区（本地仓库）		
 	
 	删除命令：
 	
