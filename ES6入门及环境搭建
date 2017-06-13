@@ -65,10 +65,17 @@
                 
 
             9.cmd 命令行转换ES6到ES5并且创建一个es5.js文件
+                
                babel es6.js --out-file es5.js--presets es2015
                
                只在命令里面打印出编译后的es5的代码
                babel es6.j --presets es2015
+           
+           10.自动转换：babel es6.js -w --out-file es5.js --presets es2015
+           
+           11.添加并编写index.html文件
+           
+           12.
 
 
         
