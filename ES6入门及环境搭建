@@ -117,6 +117,7 @@
    			<script type="text/javascript" src='/node_modules/babel-core/browser-polyfill.min.js'></script>
 			<script type="text/babel" src="es6.js"></script>
 		3.webstorm自带的file watcher的功能
+		打开New Watcher配置界面，如果没有提示，也可以通过【文件(File)】-【设置(Settings)】-【工具(Tools)】-【File Watchers】-【+】-【Less】打开New Watcher配置界面。
 		
 
         
