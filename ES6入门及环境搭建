@@ -93,7 +93,23 @@
 	           <script type="text/babel" src="es6.js"></script>   
            
            16.在当前项目目录下启动Browsersync，开始监听
-                browser-sync start --server --files'**'
+                browser-sync start --server --files '**'
+	   	
+		Serving files from:
+		Watchimg files...
+		
+	   	显示：Reloading Browsers...
+	    17.修改es6.js
+	    	let a=11;
+		let results = [1, 2, 3].map(x => x*x );
+		console.log(a);
+		console.log(results);
+	 	页面自动刷新出结果
+		1这里的es6到es5的转换时在浏览器端实现的，可同时刷新chrome和ie11，现在es6可以在各种浏览器上使用了。
+		
+	    18.回到命令行的方式再来看看：
+	    	CMD运行：babel es6.js --out-file es5.js --presets es2015
+		
 
         
     
