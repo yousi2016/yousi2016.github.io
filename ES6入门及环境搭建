@@ -86,7 +86,14 @@
            
            14  安装babel-core(在网页上实时转换ES6到ES5)
                 npm install babel-core@5 --save
-
+           
+           15.index.html页面引入babel-core实时转换js代码
+               <script type="text/javascript" src='/node_modules/babel-core/browser.min.js'></script>
+               <script type="text/javascript" src='/node_modules/babel-core/browser-polyfill.min.js'></script>
+	           <script type="text/babel" src="es6.js"></script>   
+           
+           16.在当前项目目录下启动Browsersync，开始监听
+                browser-sync start --server --files'**'
 
         
     
