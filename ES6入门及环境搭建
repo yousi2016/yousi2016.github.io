@@ -110,6 +110,14 @@
 	    18.回到命令行的方式再来看看：
 	    	CMD运行：babel es6.js --out-file es5.js --presets es2015
 		
+	    19.三种es6到es5的转换方式：
+	    	1.babel命令行方式：babel es6.js --out-file es5.js --presets es2015
+		2.浏览器引入babel-core的方式
+			<script type="text/javascript" src='/node_modules/babel-core/browser.min.js'></script>
+   			<script type="text/javascript" src='/node_modules/babel-core/browser-polyfill.min.js'></script>
+			<script type="text/babel" src="es6.js"></script>
+		3.webstorm自带的file watcher的功能
+		
 
         
     
