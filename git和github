@@ -88,6 +88,8 @@ git：工具
 			fac7e0f HEAD@{5}: commit (initial): write me a readme.txt
 		15.然后就可以回退到指定版本：git reset --hard adbdf1a
 		
+		16.git commit只负责把暂存区的修改提交
+		
 	设置全局用户名和邮箱
 		git config --global user.name 'yousi2016'
 		git config --global user.name 'dingyousi888@gmail.com'
