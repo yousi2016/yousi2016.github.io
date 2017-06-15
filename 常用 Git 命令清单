@@ -252,6 +252,8 @@ $ git reset [file]
 # 重置暂存区与工作区，与上一次commit保持一致
 $ git reset --hard
 
+git reset HEAD file可以把暂存区的修改撤销掉
+
 # 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变
 $ git reset [commit]
 
