@@ -91,7 +91,40 @@
     
     6.先用git status查看一下状态：$ git status
     
-    7.
+    7.把readme.txt和LICENSE都添加到暂存区：$ git add .
+    
+    8.用git status再查看一下：$ git status
+    
+    9.执行git commit就可以一次性把暂存区的所有修改提交到分支:$ git commit -m "understand how stage works"
+    
+    10.$ git status
+        暂存区就没有任何内容了
+        
+六 管理修改
+
+    1.对readme.txt做一个修改
+        内容：
+        Git is a distributed version control system.
+        Git is free software distributed under the GPL.
+        Git has a mutable index called stage.
+        Git tracks changes.
+    2.然后，添加：$ git add readme.txt
+                 $ git status
+    
+    3.然后，再修改readme.txt
+        内容：
+        Git is a distributed version control system.
+        Git is free software distributed under the GPL.
+        Git has a mutable index called stage.
+        Git tracks changes of files.
+    
+    4.提交：$ git commit -m "git tracks changes"
+    
+    5.提交后，再看看状态：$ git status
+    
+    6.可以查看工作区和版本库里面最新版本的区别：$ git diff HEAD -- readme.txt 
+     
+
         
     
     
