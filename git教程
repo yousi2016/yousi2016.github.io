@@ -1,0 +1,32 @@
+一下载安装
+    1.下载地址：https://git-for-windows.github.io
+    
+    2.设置名字和Email地址
+      $ git config --global user.name "Your Name"
+      $ git config --global user.email "email@example.com"
+      
+二创建版本库
+    1.创建一个空目录：$ mkdir learngit
+    
+    2.进入此目录：$ cd learngit
+    
+    3.显示当前命令：$ pwd
+    
+    4.把这个目录变成Git可以管理的仓库：$ git init
+    
+    5.下载Notepad++(下载地址：https://notepad-plus-plus.org/)代替记事本
+    
+      Notepad++的默认编码设置为UTF-8 without BOM
+      
+    6.在learngit文件夹下新建一个readme.txt
+    
+      内容：
+      Git is a version control system.
+      Git is free software.
+      
+    7.将工作区文件添加到暂存区：$ git add readme.txt
+    
+    8.将暂存区文件添加到版本库：$ git commit -m "wrote a readme file"
+    
+    
+    
