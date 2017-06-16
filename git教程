@@ -66,11 +66,34 @@
     
     6.再看看现在版本库的状态：$ git log
     
-    7.指定回到未来的某个版本：$ git reset --hard 3628164
-    
+    7.指定回到未来的某个版本：$ git reset --hard  e0d9792
+        同时readme.txt内容会变化，得重新保存
+        
     8.再看看readme.txt的内容：$ cat readme.txt
     
     9.记录你的每一次命令：$ git reflog
+    
+五 工作区和暂存区和版本库
+
+    1.工作区：learngit文件夹
+    
+    2.暂存区：git add的地方
+    
+    3.版本库：包括暂存区和master
+    
+    4.再练习一遍，先对readme.txt做个修改
+        内容：
+        Git is a distributed version control system.
+        Git is free software distributed under the GPL.
+        Git has a mutable index called stage.
+    
+    5.在工作区新增一个LICENSE文本文件（内容随便写）
+    
+    6.先用git status查看一下状态：$ git status
+    
+    7.
+        
+    
     
 
     
