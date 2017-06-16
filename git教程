@@ -1,11 +1,11 @@
-一下载安装
+一 下载安装
     1.下载地址：https://git-for-windows.github.io
     
     2.设置名字和Email地址
       $ git config --global user.name "Your Name"
       $ git config --global user.email "email@example.com"
       
-二创建版本库
+二 创建版本库
     1.创建一个空目录：$ mkdir learngit
     
     2.进入此目录：$ cd learngit
@@ -27,6 +27,52 @@
     7.将工作区文件添加到暂存区：$ git add readme.txt
     
     8.将暂存区文件添加到版本库：$ git commit -m "wrote a readme file"
+    
+三 时光机穿梭
+
+    1.继续修改readme.txt文件
+        内容：
+        Git is a distributed version control system.
+        Git is free software.
+        
+    2.运行命令查看结果：$ git status
+    
+    3.查看对readme.txt的修改内容：$ git diff readme.txt 
+    
+    4.$ git add readme.txt
+    
+    5.$ git status
+    
+    6.$ git commit -m "add distributed"
+    
+    7.$ git status
+
+四 版本回退
+    
+    1.继续修改readme.txt文件
+        内容：
+        Git is a distributed version control system.
+        Git is free software distributed under the GPL.
+        
+    2.  $ git add readme.txt
+        $ git commit -m "append GPL"
+    
+    3.打印修改的历史记录：$ git log
+      只打印commit id（版本号）：$ git log --pretty=oneline
+      
+    4.把当前版本“append GPL”回退到上一个版本“add distributed”：$ git reset --hard HEAD^
+    
+    5.看看readme.txt的内容是不是版本add distributed：$ cat readme.txt
+    
+    6.再看看现在版本库的状态：$ git log
+    
+    7.指定回到未来的某个版本：$ git reset --hard 3628164
+    
+    8.再看看readme.txt的内容：$ cat readme.txt
+    
+    9.记录你的每一次命令：$ git reflog
+    
+
     
     
     
