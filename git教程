@@ -102,28 +102,33 @@
         
 六 管理修改
 
-    1.对readme.txt做一个修改
-        内容：
-        Git is a distributed version control system.
-        Git is free software distributed under the GPL.
-        Git has a mutable index called stage.
-        Git tracks changes.
+    1.对readme.txt做一个修改，添加一行： Git tracks changes.
+                     
     2.然后，添加：$ git add readme.txt
                  $ git status
     
-    3.然后，再修改readme.txt
-        内容：
-        Git is a distributed version control system.
-        Git is free software distributed under the GPL.
-        Git has a mutable index called stage.
-        Git tracks changes of files.
+    3.然后，再修改readme.txt，添加一行：Git tracks changes of files.
+        
     
     4.提交：$ git commit -m "git tracks changes"
     
     5.提交后，再看看状态：$ git status
     
     6.可以查看工作区和版本库里面最新版本的区别：$ git diff HEAD -- readme.txt 
-     
+
+七 撤销修改
+
+    1.你在readme.txt中添加了一行：My stupid boss still prefers SVN.
+    
+    2.把readme.txt文件在工作区的修改全部撤销：$ git checkout -- readme.txt
+    
+    3.把暂存区的修改撤销掉（unstage），重新放回工作区：$ git reset HEAD readme.txt
+        现在暂存区是干净的，工作区有修改
+        
+    4.丢弃工作区的修改：$ git checkout -- readme.txt
+    
+    
+        
 
         
     
