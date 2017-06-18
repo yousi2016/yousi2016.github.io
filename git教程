@@ -151,6 +151,14 @@
              然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容：
        
              点“Add Key”，你就应该看到已经添加的Key：
+             
+     3.添加远程库
+     
+            1.把一个已有的本地仓库与之关联：$ git remote add origin git@github.com:yousi2016/learngit.git
+            
+            2.把本地库的所有内容推送到远程库上：$ git push -u origin master
+            
+            3.只要本地作了提交，就可以通过命令：$ git push origin master
     
         
 
