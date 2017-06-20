@@ -102,6 +102,8 @@
 		
 		必须在 /d/qqke/vip/rnlesson1这个文件夹下面打开
 		
+		重启的话先按两次ctrl+c退出然后重新输入browser-sync start --server --files '**'
+		
 	    17.修改es6.js
 	    	let a=11;
 		let results = [1, 2, 3].map(x => x*x );
