@@ -99,6 +99,9 @@
 		Watchimg files...
 		
 	   	显示：Reloading Browsers...
+		
+		必须在 /d/qqke/vip/rnlesson1这个文件夹下面打开
+		
 	    17.修改es6.js
 	    	let a=11;
 		let results = [1, 2, 3].map(x => x*x );
