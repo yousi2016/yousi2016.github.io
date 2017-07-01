@@ -2,6 +2,7 @@
 
 2.先安装nodejs
     下载地址：http://nodejs.org/zh-cn/
+    此处如果不安装的话，下面即使通过nvm安装的nodejs，但是npm没有安装上
 
 3.nvm安装步骤：
     下载地址：https://github.com/coreybutler/nvm-windows/releases
