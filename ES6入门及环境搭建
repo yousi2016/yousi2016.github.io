@@ -49,7 +49,7 @@
         ES6语法支持度：IE9为0%；IE11为11%；chrome56为97%。
  
  10.ES6到ES5的转换
-        1.使用Babel完成ES6到ES5的转换
+        
         2.使用npm创建一个nodejs工程步骤：
             1.mkdir命令用来创建目录:mkdir rnlesson1
             2.进到刚创建的文件夹的下面：cd rnlesson1
