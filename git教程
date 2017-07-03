@@ -159,9 +159,40 @@
             2.把本地库的所有内容推送到远程库上：$ git push -u origin master
             
             3.只要本地作了提交，就可以通过命令：$ git push origin master
-    
-        
+            
+     4.从远程库克隆
+     
+            1.现在，假设我们从零开发，那么最好的方式是先创建远程库，然后，从远程库克隆。
 
+            首先，登陆GitHub，创建一个新的仓库，名字叫gitskills：
+            
+            2.现在，远程库已经准备好了，下一步是用命令git clone克隆一个本地库：
+                $ git clone git@github.com:michaelliao/gitskills.git
+                注意把Git库的地址换成你自己的，然后进入gitskills目录看看，已经有README.md文件了。
+                $ cd gitskills
+                $ ls
+九分支管理
+    1.创建与合并分支
+        1.首先，我们创建dev分支，然后切换到dev分支：$ git checkout -b dev$ git branch
+        
+        2.查看当前分支：$ git branch
+        
+        3.然后，我们就可以在dev分支上正常提交，比如对readme.txt做个修改，加上一行： Creating a new branch is quick.
+        
+        4.  $ git add readme.txt 
+            $ git commit -m "branch test"
+            
+        5. 现在，dev分支的工作完成，我们就可以切换回master分支：$ git checkout master
+        
+        6.现在，我们把dev分支的工作成果合并到master分支上：$ git merge dev
+        
+        7.合并完成后，就可以放心地删除dev分支了：$ git branch -d dev
+        
+        8.删除后，查看branch，就只剩下master分支了：$ git branch
+            
+
+           
+        
         
     
     
