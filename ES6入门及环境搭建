@@ -7,7 +7,7 @@
 3.nvm安装步骤：
     下载地址：https://github.com/coreybutler/nvm-windows/releases
     cmd  set | findstr "nvm"
-    cmd 运行 nvm -h
+    cmd 运行 nvm -h或者nvm version
 
 4.nvm配置淘宝镜像（下载更快）
     修改D:\dev\nvm\setting.txt
