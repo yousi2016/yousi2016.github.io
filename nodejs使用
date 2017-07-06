@@ -1,6 +1,0 @@
-1.下载安装：https://nodejs.org/en/download/
-选择：Windows Installer (.msi)(包括npm) 64-bit
-2.安装随便选择路径，不管哪个文件夹下的文件都会在node下面运行
-eg:d:\baiyuyunpan\miaov\nodejs\hello.js
-3.d: cd。。。进入到目录下，然后node hello.js
-
