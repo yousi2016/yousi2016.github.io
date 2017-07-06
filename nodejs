@@ -1,1 +1,8 @@
-1.
+1.首先下载安装nvm配置环境（详情见ES6入门及环境搭建）
+
+2.通过nvm安装node
+
+3.查看nvm版本控制工具的根目录：nvm root
+  D:\dev\nvm
+
+4.真正执行的是在这个目录: D:\dev\nodejs\node.exe
