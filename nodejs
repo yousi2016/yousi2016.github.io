@@ -6,3 +6,5 @@
   D:\dev\nvm
 
 4.真正执行的是在这个目录: D:\dev\nodejs\node.exe
+
+5.nvm的实现原理：通过创建快捷方式D:\dev\nodejs从而控制nodejs的版本
