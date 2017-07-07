@@ -8,3 +8,38 @@
 4.真正执行的是在这个目录: D:\dev\nodejs\node.exe
 
 5.nvm的实现原理：通过创建快捷方式D:\dev\nodejs从而控制nodejs的版本
+
+6.nvm 会搜索每一个node版本下面的node.exe
+
+7.查看npm的相关命令：npm -h
+
+8.管理npm的配置路径：npm config
+
+9. npm config list:C:\Users\wangze\.npmrc
+
+10.先建一个文件夹：mkdir http
+
+11.切换到http目录：cd http
+
+12.生成一个package.json文件：npm init
+
+13.用5行js代码实现一个服务器
+    var http=require('http');
+
+    http.createServer(function (req, res) {
+
+      res.writeHeader(200, {'Content-type': "text/plain"});
+
+      res.write('hello world');
+
+      res.end();
+
+    }).listen(80, function () {
+
+      console.log('Server is staring on port 80.');
+
+    });
+14.C:\Users\wangze\http>node index.js(系统默认是80端口，如果被占用，得先关掉计算机-》管理-》服务和应用程序-》IIS-》右边操作里面停止)
+
+    Server is starting on port 80
+  
