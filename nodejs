@@ -34,12 +34,17 @@
 
       res.end();
 
-    }).listen(80, function () {
+    }).listen(8888, function () {
 
       console.log('Server is staring on port 80.');
 
     });
-14.C:\Users\wangze\http>node index.js(系统默认是80端口，如果被占用，得先关掉计算机-》管理-》服务和应用程序-》IIS-》右边操作里面停止)
+14.C:\Users\wangze\http>node index.js(系统默认是80端口，如果被占用，得先关掉计算机-》管理-》服务和应用程序-》IIS-》右边操作里面停止,或者修改端口只要不是80就行)
 
     Server is starting on port 80
+
+15. npm info gulp:从淘宝镜像站上查找包的信息
+
+16. npm info gulp versions:查找所有版本
+    npm info gulp verfion 查找最后一个版本
   
