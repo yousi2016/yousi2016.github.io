@@ -175,7 +175,7 @@
                 $ ls
 九分支管理
     1.创建与合并分支
-        1.首先，我们创建dev分支，然后切换到dev分支：$ git checkout -b dev$ git branch
+        1.首先，我们创建dev分支，然后切换到dev分支：$ git checkout -b dev
         
         2.查看当前分支：$ git branch
         
