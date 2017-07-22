@@ -46,30 +46,10 @@ Sublime Text插件：
 import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())
 开始安装一些非常实用的插件吧，Ctrl+Shift+P（菜单 – Tools – Command Paletter），输入 install 选中Install Package并回车，输入或选择你需要的插件回车就安装了（注意左下角的小文字变化，会提示安装成功），安装其它插件也是这个方法，非常快速。
 
-ZenCoding
-不得不用的一款前端开发方面的插件，Write less , show more.安装后可直接使用，Tab键触发，Alt+Shift+W是个代码机器。
-Alignment
-代码对齐，如写几个变量，选中这几行，Ctrl+Alt+A，哇，齐了。
-Prefixr
-写 CSS可自动添加 -webkit 等私有词缀，Ctrl+Alt+X触发。
-Tag
-Html格式化，右键Auto-Format Tags on Ducument。
-Clipboard History
-剪贴板历史记录，显示更多历史复制，Ctrl+Shift+V触发。
-SideBarEnhancements
-侧栏右键功能增强，非常实用
-Theme – Soda
-完美的编码主题，用过的都说好，Setting user里面添加”theme”: “Soda Dark.sublime-theme”
-GBK to UTF8
-将文件编码从GBK转黄成UTF8，菜单 – File里面找
-SFTP
-直接编辑 FTP 或 SFTP 服务器上的文件，绝对FTP浮云
-WordPress
-集成一些WordPress的函数，对于像我这种经常要写WP模版和插件的人特别有用
-PHPTidy
-整理排版PHP代码
-YUI Compressor
-压缩JS和CSS文件
+
+
+
+1.将本地文件夹添加到项目：project->add folder to project
 
 
 
