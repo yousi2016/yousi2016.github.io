@@ -2,7 +2,10 @@
 一.SublimeServer安装方法:
 
 
-1.如果你使用Sublime Text作为你的编辑器，那么在进行HTML和Javascript开发的时候有一个很有用的功能，帮你完成前端的联调测试，那就是Sublime Text的服务器插件：SublimeServer。使用了该插件后，你不在需要单独的启动Tomcat或者Apache这样的重型服务器，就可以完成HTML和Javascript在服务器的联调。SublimeServer会启动一个轻量级的，静态的WEB服务器，让你在文本编辑器中直接启动服务器，并进行测试联调。安装方法也很简单：
+1.如果你使用Sublime Text作为你的编辑器，那么在进行HTML和Javascript开发的时候有一个很有用的功能，
+帮你完成前端的联调测试，那就是Sublime Text的服务器插件：SublimeServer。使用了该插件后，你不在需要单独的启动Tomcat或者Apache这样的重型服务器，
+就可以完成HTML和Javascript在服务器的联调。SublimeServer会启动一个轻量级的，静态的WEB服务器，让你在文本编辑器中直接启动服务器，并进行测试联调。
+安装方法也很简单：
 
 1、Ctrl + Shift +P，启动Sublime Text的命令行
 
