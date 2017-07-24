@@ -51,5 +51,44 @@ import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_pac
 
 1.将本地文件夹添加到项目：project->add folder to project
 
+2.sublime插件emmet的配置、使用及快捷键Ctrl+E修改成Tab键操作
+
+一、emmet在sublime中的配置与使用：
+1、点击sublime text 3的图标，打开编辑器；
+
+2、按键“ctrl+shift+p”，或者单击菜单->工具->命令面板；
+
+3、打开了命令面板，输入“pcip”（package control install package）四个单词的首字母；
+
+4、即可出现新的安装package的面板，搜索emmet：
+
+5、如搜索列表，第一个就是，虽然描述里说明的是sublime text 2 的plugin，但依然支持sublime text 3。选中这个或者单击它即可安装，在编辑器的左下角即可看到安装的状态。
+
+6、安装成功后，在菜单->preferences->Package Settings选项里即可看到Emmet的身影。
+
+二、emmet默认填充的快捷键是Ctrl+E，使用起来很是不方便，如何修改成常用的Tab键呢？
+
+在设置菜单栏里找到如下路径，路径如下：Preferences>PackageSettings>Emmet>KeyBindings-User:
+
+在出现的界面中粘贴如下配置信息，保存。
+
+[
+{
+"keys": [
+"tab"
+], 
+"args": {
+"action": "expand_abbreviation"
+}, 
+"command": "run_emmet_action", 
+"context": [
+{
+"key": "emmet_action_enabled.expand_abbreviation"
+}
+]
+}
+]
+检查快捷键Tab是不是可以使用了，如果不可以重启一下sublime试试。
+
 
 
