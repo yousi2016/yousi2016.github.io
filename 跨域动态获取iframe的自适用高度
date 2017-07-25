@@ -13,3 +13,28 @@
   };
   
 </script>
+2.和第一个域名一样的代理页面：agent.html
+<!DOCTYPE HTML>
+<html>
+	<body>
+		<script type="text/javascript">
+			var hash=location.hash.split('#')[1];
+			parent.parent.setHeight(hash+"px");
+
+		</script>
+	</body>
+</html>
+
+3.第二个域名下面的页面b.html
+	function sethash(){
+	   	var iframehtml='<iframe id="agentIframe" src="" style="display: none;"></iframe>';
+	   	if($('#agentIframe')[0]){
+	   		$('#agentIframe').remove();
+	   	}
+	   	$('body').append(iframehtml);
+	   	
+		var hashH = $('.container').height();
+	    document.getElementById("agentIframe").src='http://www.gov.cn/fuwu/bzxxcx/agent.html#'+hashH; 
+	}
+	window.onload=sethash;
+
