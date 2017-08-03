@@ -1,1 +1,3 @@
-
+默认路径安装nvm，
+用nvm去安装nodejs（version>4.0）
+用npm（version>3.0）去安装vue-cli
