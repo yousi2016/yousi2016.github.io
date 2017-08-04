@@ -56,7 +56,7 @@ import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_pac
 一、emmet在sublime中的配置与使用：
 1、点击sublime text 3的图标，打开编辑器；
 
-2、按键“ctrl+shift+p”，或者单击菜单->工具->命令面板；
+2、按键“ctrl+shift+p”，或者单击菜单->工具->命令面板
 
 3、打开了命令面板，输入“pcip”（package control install package）四个单词的首字母；
 
