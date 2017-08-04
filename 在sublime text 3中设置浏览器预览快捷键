@@ -1,0 +1,59 @@
+1、安装 SideBarEnhancements 
+
+ctrl+shift+p，进入命令模式，然后输入package control(或者直接输 pci 或许也行)，回车：
+
+
+
+输入：SideBarEnhancements ，回车：
+
+
+
+这样SideBarEnhancements 就安装好了；
+
+2、设置浏览器预览快捷键：
+
+
+
+点开其中的Key Bindings ，进入界面：
+
+
+
+输入下列代码：
+
+按 Ctrl+C 复制代码
+
+/*360*/
+    {  
+        "keys": ["f12"],  
+        "command": "side_bar_files_open_with", "args": {"application": "C:/Users/Administrator/AppData/Roaming/360se6/Application/360se.exe"/*此处为浏览器程序的位置*/, "extensions": ".*", "paths": []}  
+    },
+    /*IE*/  
+    {  
+        "keys": ["ctrl+f2"],  
+        "command": "side_bar_files_open_with", "args": {"application": "C:/Program Files (x86)/Internet Explorer/iexplore.exe"/*此处为浏览器程序的位置*/, "extensions": ".*", "paths": []}  
+    },  
+    /*Firefox*/
+    {  
+        "keys": ["ctrl+shift+f12"],  
+        "command": "side_bar_files_open_with", "args": {"application": "D:/工作文档/软件/火狐/firefox.exe"/*此处为浏览器程序的位置*/, "extensions": ".*", "paths": []}  
+    }
+按 Ctrl+C 复制代码
+其中，/**/中的内容为注释，在这个地方：/*此处为浏览器程序的位置*/，把前面那个双引号里内容换成自己浏览器程序的地址即可，但是注意的是：\要换成\\或者/ ；快捷键可以在  "keys":["快捷键"] 更改。
+
+然后ctrl + s 保存关闭就可以了。
+
+如果不知道自己的浏览器程序位置，可以点击图标，查看属性：
+
+
+
+注意：IE浏览的目标位置，可能有双引号，复制进去的时候需要去掉：
+
+
+
+ 
+
+ 
+
+ 这样，在sublime text 3中设置浏览器预览快捷键就完成了。
+
+ 当然所有的冒号引号什么的都是英文，，，中文肯定不行，，，
