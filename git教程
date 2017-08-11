@@ -156,13 +156,17 @@
              
      3.添加远程库
      
-            1.在github上创建一个远程库，让本地和远程进行远程同步
+            1.首先必须在github上创建一个远程库learngit（仓库的名字===最外层文件夹名字），让本地仓库和远程仓库进行远程同步
             
             2.把一个已有的本地仓库与之关联：$ git remote add origin git@github.com:yousi2016/learngit.git
             
             3.把本地库的所有内容推送到远程库上：$ git push -u origin master
             
-            4.只要本地作了提交，就可以通过命令：$ git push origin master
+            4.git add .
+            
+            5.git commit -m 
+
+            6.git push origin master
             
      4.从远程库克隆
      
@@ -193,6 +197,9 @@
         7.合并完成后，就可以放心地删除dev分支了：$ git branch -d dev
         
         8.删除后，查看branch，就只剩下master分支了：$ git branch
+        
+
+
             
 
            
