@@ -154,20 +154,37 @@
        
              点“Add Key”，你就应该看到已经添加的Key：
              
-     3.添加远程库
+     3.git上传文件夹以及文件到github有两种方法
      
-            1.首先必须在github上创建一个远程库learngit（仓库的名字===最外层文件夹名字），让本地仓库和远程仓库进行远程同步
+            第一种：(麻烦不推荐）
             
-            2.把一个已有的本地仓库与之关联：$ git remote add origin git@github.com:yousi2016/learngit.git
+                 1.首先必须在github上创建一个远程库learngit（仓库的名字===最外层文件夹名字）
             
-            3.把本地库的所有内容推送到远程库上：$ git push -u origin master
+                 2.把一个已有的本地仓库与之关联：git remote add origin git@github.com:yousi2016/learngit.git
+                 (如果有错误一般用：git remote rm origin或者git pull origin master）
+                       
+                 3.git add .
             
-            4.git add .
+                 4.git commit -m             
             
-            5.git commit -m 
-
-            6.git push origin master
+                 5.第一次把本地库的所有内容推送到远程库上：git push -u origin master
             
+                 6.以后每次都git push origin maste
+                 
+             第二种：（推荐）
+                   1.首先必须在github上创建一个远程库learngit
+                   
+                   2.将远程库clone到本地：git clone https://github.com/yousi2016/public_comment_app.git
+                   
+                   3.然后将项目文件夹放到本地工作区中
+                   
+                   4.git add .
+                   
+                   5.git commit -m
+                   
+                   6.git push origin master
+                   
+             
      4.从远程库克隆
      
             1.现在，假设我们从零开发，那么最好的方式是先创建远程库，然后，从远程库克隆。
