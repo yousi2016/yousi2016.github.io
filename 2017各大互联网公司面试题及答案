@@ -63,3 +63,12 @@ function fomatDate (dt) {
 			var fomatDate=fomatDate(dt);
 			
 			console.log(fomatDate);
+3.获取长度一致的字符串格式的随机数
+
+var random=Math.random();
+			
+			var random=random+'0000000000';
+			
+			var random=random.slice(0, 10);
+			
+			console.log(random);
