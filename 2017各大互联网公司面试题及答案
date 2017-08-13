@@ -35,3 +35,31 @@ function forEach (obj, fn) {
 			forEach(obj, function (key, value) {
 				console.log(key, value);
 			});
+2.获取当前2017-08-13这种格式的日期函数fomatDate
+function fomatDate (dt) {
+				if (!dt) {
+					
+					return dt=new Date();
+				}
+				
+				var year=dt.getFullYear(),
+					
+					month=dt.getMonth(),
+					
+					date=dt.getDate()
+				
+				if (month<10) {
+					month='0'+(month+1);
+				}
+				
+				if (date<10) {
+					date='0'+date;
+				}
+				return year +'-'+ month +'-'+ date;
+			};
+			
+			var dt=new Date();
+			
+			var fomatDate=fomatDate(dt);
+			
+			console.log(fomatDate);
