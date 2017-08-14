@@ -1,5 +1,146 @@
 
-1.写一个能遍历数组和对象的forEach函数：
+
+1.函数的作用域，看定义函数的地方，而不是调用函数的地方
+
+2.说一下对变量提升的理解：
+	1.变量定义
+	2.函数声明（注意函数表达式的区别）
+	
+3.说明this几种不同的使用场景：
+	1.作为构造函数执行
+	2.作为对象属性执行
+	3.作为普通函数执行
+	4.call apply bind
+	
+4.创建10个a标签，点击的时候弹出来对应的序号：
+	var i;
+			
+	for (i = 0; i < 10; i++) {
+		
+		(function (i) {
+			
+			var a=document.createElement("a");
+		
+			a.innerHTML=i;
+			
+			a.addEventListener('click', function () {
+				console.log(i)
+			});
+			document.body.appendChild(a);
+		})(i);
+		
+	};
+5.如何理解作用域：
+	1.自由变量
+	2.作用域链，即自由变量的查找
+	3.闭包的两个场景
+		1.f 通过return 和 传参数
+6.实际开发中闭包的应用：
+		function isFirstLoad () {
+				
+			var _List=[];
+			
+			return function (id) {
+				if ( _List.indexOf(id) >= 0 ) {
+					
+					return false;
+					
+				} else{
+					
+					_List.push(id);
+					
+					return true;
+				}
+			}
+		};
+		
+		var firstLoad=isFirstLoad();
+		
+		console.log(firstLoad(10));//true
+		console.log(firstLoad(10));//false
+		console.log(firstLoad(20));//true
+
+7.this使用场景：
+	1.构造函数
+	2.对象属性
+	3.普通函数
+	4.call apply bind
+
+8.同步和异步的区别：
+	1.同步会阻塞代码执行，而异步不会
+	2.alert是同步，setTimeout是异步
+9.分别举一个同步和异步的例子
+
+同步：
+//alert
+console.log(100);
+alert(200);
+console.log(300);
+
+//异步的几种例子
+			//定时器
+			console.log(100);
+			
+			//此处不管设置时间是多少都会暂存起来，等所有程序都执行完毕再回过头来执行
+			//js单线程不会同时干两件事情
+			setTimeout(function () {
+				console.log(200);
+			},0);
+			
+			console.log(300);
+			
+			//ajax
+			console.log('start');
+			
+			//也是暂存起来，等请求回来后再执行回调函数
+			$.get('ccc.json', function (data) {
+				console.log(data);
+			});
+			console.log('end');
+			
+			//图片
+			console.log('start');
+			var img=document.createElement("img");
+			img.onload=function () {
+				console.log(300)
+				document.body.appendChild(img);
+			};
+			img.src='http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1301/08/c1/17228898_1357627460106.jpg'
+			console.log('end');
+			
+			//事件
+			console.log('start');
+			var oBtn=document.getElementById("btn");
+			//也是暂存起来，等点击后再执行
+			oBtn.addEventListener('click', function () {
+				console.log('clicked')
+			});
+			console.log('end');
+			
+10.一个关于setTimeout的笔试题
+	console.log(100);
+	//将函数领出去，处于封禁状态		
+	setTimeout(function () {
+		console.log(200);
+	},1000);
+	
+	console.log(300);
+	
+	setTimeout(function () {
+		console.log(400);
+	});或者
+	//将函数领出去，处于一个解禁状态，但是不封禁
+	setTimeout(function () {
+		console.log(400);
+	},0);
+	
+	console.log(500);
+11.前端使用异步的场景有哪些
+		1.定时任务：setTimeout setInterval
+		2.网络请求：ajax请求，动态img加载
+		3.事件绑定
+
+12.写一个能遍历数组和对象的forEach函数：
 function forEach (obj, fn) {
 				
 				var key;
@@ -35,7 +176,7 @@ function forEach (obj, fn) {
 			forEach(obj, function (key, value) {
 				console.log(key, value);
 			});
-2.获取当前2017-08-13这种格式的日期函数fomatDate
+13.获取当前2017-08-13这种格式的日期函数fomatDate
 function fomatDate (dt) {
 				if (!dt) {
 					
@@ -63,7 +204,7 @@ function fomatDate (dt) {
 			var fomatDate=fomatDate(dt);
 			
 			console.log(fomatDate);
-3.获取长度一致的字符串格式的随机数
+14.获取长度一致的字符串格式的随机数
 
 var random=Math.random();
 			
@@ -72,3 +213,4 @@ var random=Math.random();
 			var random=random.slice(0, 10);
 			
 			console.log(random);
+
