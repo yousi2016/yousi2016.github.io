@@ -1,0 +1,63 @@
+没有添加针对移动端处理的meta的时候：
+			默认的pc屏幕分辨率宽度是1920
+			默认的移动端屏幕viewport分辨率宽度是980
+			我们的需求：
+      
+			1、让页面的宽度跟着访问设备的宽度一致	width=device-width（如果只在微信一个设备，就可以写死640就行，如果在各种设备和浏览器就不能写死了，就要自适应）
+			2、不想让用户进行页面缩放				user-scalable=no
+			3、我还想控制像素比			-> 看课件2
+				如何让1px做1px的事情？
+					1:1像素还原
+					尽可能和设备分辨率一致
+            总结：不同移动端设备像素比不一样，设计稿的1px在它们上面显示的也不一样，我们就要去掉这个默认的，让它们都显示１ｐｘ
+            
+          同一设计稿在PC端1px就是显示的1px
+			    www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions
+			
+		     为了符合栅格系统，屏幕分辨率在像素比为3的情况下要自动处理成1080*1920的
+		4:zoom to fit==Fit如果不勾上就看不到页面的全貌，如果勾上就会看到页面的全貌但是会压缩页面，这样和预期效果不一样了，最好不要勾上
+    
+		（只有连接投影仪需要刻意压缩页面才能看到预览效果的才能勾上）
+    
+    
+    5//通过js动态设置视口(viewport)
+			//动态设置像素比的目的就是让1px在移动端也显示1px
+      var pixelRatio = 1 / window.devicePixelRatio;
+      document.write('<meta name="viewport" content="width=device-width,initial-scale='+pixelRatio+',minimum-scale='+pixelRatio+',maximum-scale='+pixelRatio+'" />');
+      
+   6.布局步骤
+			1、确定尺寸（设计稿） 并且还得在符合该尺寸的模拟器下进行第一次预览
+			2、搭建大体框架
+      
+   7.px 绝对（固定）单位
+				缺点：任何情况下都是固定值，会导致布局在不同尺寸的设备下错位
+			%	相对单位（会有影响发生变化）  相对于父级（自身）大小进行计算
+				缺点：能确定范围的还是比较好计算的，对于不太好确定值的地方不好使用百分比。并且，会导致变形。
+			em	相对单位（会有影响发生变化）	em = 当前字体大小
+				缺点：会根据当前容器字体大小发生变化，假如每个容器字体大小不一致，那么计算会非常麻烦。
+			
+			
+			rem
+			r = root
+			em = 字体大小 font size
+			
+			rem 相对单位
+				只依赖于html字体大小
+    8.动态设置字体大小：
+        // 条件：尺寸越大，则字体大小越大。尺寸越小，则字体大小越小。
+			
+			// 获取html节点
+			var html = document.getElementsByTagName('html')[0];
+			// 获取屏幕宽度
+			var pageWidth = html.getBoundingClientRect().width;
+			// 屏幕宽度 / 固定数值 = 基准值
+											/*此处除以几都行，一般是16(黄金比例)或者10*/
+			html.style.fontSize = pageWidth / 10 + "px";
+			/*640是符合大部分设备的宽度，所以设计稿一般宽度都是640px的
+			 *为了方便就 根据设计图的宽度640/10=64=1rem,设计图宽度750就用750/10=75=1rem，宽度是1242/10=124.2=1rem
+			 * iphone5 300px/64px=4.6875rem;
+			 * iphone6 plus 580.188/124.2=4.6875rem
+        
+        
+    
+    
