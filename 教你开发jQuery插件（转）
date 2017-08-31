@@ -1,1 +1,9 @@
 http://www.cnblogs.com/ajianbeyourself/p/5815689.html
+
+根据《jQuery高级编程》的描述，jQuery插件开发方式主要有三种：
+
+  通过$.extend()来扩展jQuery
+  
+  通过$.fn 向jQuery添加新的方法
+  
+  通过$.widget()应用jQuery UI的部件工厂方式创建
