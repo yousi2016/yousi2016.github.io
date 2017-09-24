@@ -1,5 +1,7 @@
 http://www.cnblogs.com/ajianbeyourself/p/5815689.html
 
+http://luopq.com/2016/02/04/think-js-plugin/
+
 根据《jQuery高级编程》的描述，jQuery插件开发方式主要有三种：
 
   1.通过$.extend()来扩展jQuery
