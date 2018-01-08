@@ -1,0 +1,3 @@
+var $span=$('<span>你选择了&quot;我说'+navText+'&quot;分类</span>');
+
+html里面双引号使用&quot;转义
