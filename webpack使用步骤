@@ -9,6 +9,16 @@ npm init
 npm install webpack --save-dev
 5.ls
 node_modules 和 package.json
-6.新建一个hello.js文件
+6.新建一个hello.js文件 和一个 world.js
+在hello.js里面引入require('./world.js');
+
 7.打包
 webpack hello.js hello.bundel.js
+8.新建一个style.css文件
+在hello.js里面引入require('./style.css');
+报错：You may need an appropriate loader to handle this file type.k
+原因：webpack本身不支持css需要依赖loader
+
+安装：npm install css-loader style-loader --save-dev
+
+
