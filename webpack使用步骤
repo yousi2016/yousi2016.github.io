@@ -21,4 +21,6 @@ webpack hello.js hello.bundel.js
 
 安装：npm install css-loader style-loader --save-dev
 
+9.如果出现vim编辑器，用wq关闭
+
 
