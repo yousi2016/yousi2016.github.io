@@ -1,0 +1,4 @@
+http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html
+
+windows平台缩放图片时，可能出现图像失真现象。这时，可以尝试使用IE的专有命令：
+img { -ms-interpolation-mode: bicubic; }
