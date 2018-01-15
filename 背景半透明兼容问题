@@ -25,7 +25,7 @@ https://www.cnblogs.com/PeunZhang/p/4089894.html
 			}
 			.press_conference_list_title .title_content{
 				display: block;
-			    float: left;
+			    float: left;/*如果这里用position：abosulte，那么下面用position：relative就会覆盖，ie678会出问题*/
 			    height: 35px;
 			    font-size: 14px;
 			}
@@ -40,6 +40,7 @@ https://www.cnblogs.com/PeunZhang/p/4089894.html
 			    *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
 			  }
 			 .press_conference_list_title a{
+			 	
 		    	position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值 */
 			  }  
 			}
@@ -48,6 +49,7 @@ https://www.cnblogs.com/PeunZhang/p/4089894.html
 	</head>
 	<body>
 		<p class="press_conference_list_title">
+			<!--注意子元素必须用浮动而不能用绝对定位-->
 			<a href="<CMSPRO_DOCUMENT field='url'></CMSPRO_DOCUMENT>" class="video" target="_blank"></a>
 			<a href="<CMSPRO_DOCUMENT field='url'></CMSPRO_DOCUMENT>" class="title_content" target="_blank">海关总署介绍2017年全年进出口情况</a>
 		</p>
