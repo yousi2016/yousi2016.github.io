@@ -1,5 +1,5 @@
 https://www.cnblogs.com/PeunZhang/p/4089894.html
-
+第一种：子元素浮动
 <!DOCTYPE html>
 <html>
 	<head>
@@ -44,6 +44,74 @@ https://www.cnblogs.com/PeunZhang/p/4089894.html
 		    	position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值 */
 			  }  
 			}
+			
+		</style>
+	</head>
+	<body>
+		<p class="press_conference_list_title">
+			<!--注意子元素必须用浮动而不能用绝对定位-->
+			<a href="<CMSPRO_DOCUMENT field='url'></CMSPRO_DOCUMENT>" class="video" target="_blank"></a>
+			<a href="<CMSPRO_DOCUMENT field='url'></CMSPRO_DOCUMENT>" class="title_content" target="_blank">海关总署介绍2017年全年进出口情况</a>
+		</p>
+	</body>
+</html>
+
+第二种：子元素绝对定位
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: red;
+		}
+			.press_conference_list_title{
+				position: absolute;
+				top: 0;/*用bottom不兼容*/
+				left: 0;
+				height: 35px;
+				background-color: rgba(0,0,0,0.5);/* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
+				width: 100%;
+				line-height: 35px;
+				
+			}
+			@media \0screen\,screen\9 {/* 只支持IE6、7、8 */
+			  .press_conference_list_title{
+			    background-color:#000;
+			    filter:Alpha(opacity=50);
+			    position:static; /* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
+			    *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
+			  }
+			 .press_conference_list_title a{
+			 	
+		    	position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值 */
+			  }  
+			}
+			.press_conference_list_title .video{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 35px;
+				height: 35px;
+				margin-right: 15px;
+				background: url(http://www.gov.cn/govweb/xhtml/zhuanti/2017gmjjyxqk/images/video.jpg) 0 0 no-repeat;
+			}
+			.press_conference_list_title .title_content{
+			    position: absolute;
+				left: 45px;
+				top: 0;
+			    height: 35px;
+			    font-size: 14px;
+			}
+			.press_conference_list_title a{
+				color: #fff;
+			}
+			
 			
 		</style>
 	</head>
