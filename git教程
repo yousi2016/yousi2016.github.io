@@ -296,8 +296,38 @@
 
                     append GPL
              
-        
+        还可以通过-s用私钥签名一个标签：
 
+        $ git tag -s v0.2 -m "signed version 0.2 released" fec145a
+        
+        
+        签名采用PGP签名，因此，必须首先安装gpg（GnuPG），如果没有找到gpg，或者没有gpg密钥对，就会报错：
+
+        gpg: signing failed: secret key not available
+        error: gpg failed to sign the data
+        error: unable to sign the tag
+        如果报错，请参考GnuPG帮助文档配置Key。
+
+        用命令git show <tagname>可以看到PGP签名信息：
+
+        $ git show v0.2
+        tag v0.2
+        Tagger: Michael Liao <askxuefeng@gmail.com>
+        Date:   Mon Aug 26 07:28:33 2013 +0800
+
+        signed version 0.2 released
+        -----BEGIN PGP SIGNATURE-----
+        Version: GnuPG v1.4.12 (Darwin)
+
+        iQEcBAABAgAGBQJSGpMhAAoJEPUxHyDAhBpT4QQIAKeHfR3bo...
+        -----END PGP SIGNATURE-----
+
+        commit fec145accd63cdc9ed95a2f557ea0658a2a6537f
+        Author: Michael Liao <askxuefeng@gmail.com>
+        Date:   Thu Aug 22 10:37:30 2013 +0800
+
+            branch test
+        用PGP签名的标签是不可伪造的，因为可以验证PGP签名。验证签名的方法比较复杂，这里就不介绍了。
 
             
 
