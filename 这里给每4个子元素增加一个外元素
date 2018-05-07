@@ -1,0 +1,6 @@
+var $li_dys_item=$('.dys_item');
+						
+						$li_dys_item.each(function(i){
+							
+		            $li_dys_item.slice(i*4,i*4+4).wrapAll("<div class='dys_box'></div>");//这里每4个增加一个外元素box-item
+		        });
