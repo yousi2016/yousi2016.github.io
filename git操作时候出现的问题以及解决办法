@@ -1,0 +1,13 @@
+1.问题：
+$ ssh -T git@github.com
+Permission denied (publickey).
+解决办法：
+  1.$ ssh -T -v git@github.com
+  2.$ ls ~/.ssh
+      known_hosts说明没有公钥和私钥需要重新创建
+  3.重新创建公钥和私钥（详见博客git教程）
+  
+    
+  
+  
+
