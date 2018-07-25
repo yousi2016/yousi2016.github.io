@@ -1,0 +1,140 @@
+一、 node安装
+
+  1）如果不确定自己是否安装了node,可以在命令行工具内执行： node -v  （检查一下 版本）；
+
+
+
+2）如果 执行结果显示： xx 不是内部命令，说明你还没有安装node , node 安装地址：http://nodejs.cn/download/
+
+注 ：安装 vue-cli 脚手架目前需要node版本为 v4.0 以上；
+
+二、 vue-cli 全局安装
+
+ 命令行执行 : npm install -g vue-cli    // 加-g是安装到全局
+
+安装完成以后 可以输入命令 ：vue 回车，可以看到针对vue的命令行；
+
+
+
+ 
+
+**: 如果npm在国内的网络环境下可能会比较慢，解决方案：
+
+  使用淘宝镜像:
+
+1>.官方网址：http://npm.taobao.org；
+
+2>.安装：npm install cnpm -g --registry=https://registry.npm.taobao.org；  注意：安装完后最好查看其版本号cnpm -v或关闭命令提示符重新打开，安装完直接使用有可能会出现错误；
+
+3>.注：cnpm跟npm用法完全一致，只是在执行命令时将npm改为cnpm（以下操作将以cnpm代替npm）。
+
+4> 如何更新npm的方法：  可以使用 npm install -g npm 来更新版本
+
+三、初始化项目
+
+执行命令： vue init webpack demo(你新建的项目名称/文件名称)
+
+执行之后将会 自动初始化一个文件夹 ：demo
+
+ 
+
+手动打开demo文件夹 可以看到 已经初始化好了 一个基本的项目：
+
+
+
+ 
+
+四、启动项目
+
+  如上图所示，执行初始化项目以后，下面会有对应的命令：
+
+ 
+
+继续执行： cd demo (这是进入到demo文件夹的命令)
+
+ 然后执行 安装 ：npm install
+
+ 
+
+注： npm install 执行可以进行vue已经vue的插件安装，在第三步的时候，已经初始化了项目，并且在 package.json 里面已经有相关配置，所以在这里可以直接安装；
+
+ 安装完成之后再执行命令： npm run dev 
+
+整个项目就已经启动了：
+
+
+
+ 
+
+ 
+
+五、项目文件配置介绍
+
+build 和 config  是关于webpack的配置，里面包括一些server,和端口；
+
+node_modules: 安装依赖代码库；
+
+src :  存放源码；
+
+static：存放第三方静态资源的，static里面的.gitkeep，如果为空，也可以提交到gitHub上面，正常情况下，是不可以提交的。
+
+ .babelrc:把es6文件编译成es5
+
+复制代码
+.babelrc文件
+
+{
+  "presets": ["es2015", "stage-2"],//表示预设，表示babelrc转换预先需要安装的插件
+  "plugins": ["transform-runtime"],//把es6的方法做转换
+  "comments": false  //false表示转换后代码不生成注释
+}
+复制代码
+.editorconfig：编辑器的配置
+
+复制代码
+.editorconfig
+
+charset = utf-8  //编码
+indent_style = space //缩进风格,基于空格做缩进
+indent_size = 2   //缩进大小是2格
+end_of_line = lf   //换行符的风格
+insert_final_newline = true  //当你创建一个文件，会自动在文件末尾插入新行
+trim_trailing_whitespace = true  //自动移除行尾多余空格
+复制代码
+.eslintignore 忽略语法检查的目录文件
+
+就是忽略对build/*.js和 config/*.js
+
+package.json :  
+
+复制代码
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "demoApp",
+  "author": "",
+  "private": true,
+  "scripts": {  /*表示可以执行一些命令，例如：npm run dev会执行node build/dev-server.js，npm run build会执行node build/build.js，因此可以通过scripts配置脚本*/
+    "dev": "node build/dev-server.js",
+    "build": "node build/build.js",
+    "lint": "eslint --ext .js,.vue src"
+  },
+  "dependencies": {  /*项目的依赖*/
+    "vue": "^2.2.2",
+    "vue-router": "^2.2.0"
+  },
+  "devDependencies": {  //编译需要的依赖
+   .......................
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
+复制代码
+入口文件： index.html    和 main.js
