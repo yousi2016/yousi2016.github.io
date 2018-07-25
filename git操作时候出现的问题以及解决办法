@@ -22,7 +22,9 @@ Permission denied (publickey).
         3.$ ls ~/.ssh
             id_rsa  id_rsa.pub  known_hosts
         4.$ cat ~/.ssh/id_rsa.pub
-            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8GraYIQIDVWOkj9W40rMCga5GXbwiAxbW1yYHAPhJ                       NJV4ZqcLYktHBVF6azfhbdLw1r08lbBUUldTEnek7xySobs5sZnaHDPxijAO/AnCFUrD9n30HLkrBgHw                       lcPYYi1B66JoX7SY9NEqn+lBjs11wC4y2ECUsftV5GKXEeKTOGnDMVcjeHrVgT+imhsgq31GucwiFT8f                       N/DepL/S9R5xi/JowfLy/2rDcjOpKGJTaNsSEZ+Zqevg2LCbBRr5dv0eJcqo0GhPVCspZ5nUEn6fZO7Z                       Guq0/MDNCPEosx+UxH3NBnGWwTiaQOuj66gkhHGUjb/BknyilBl6wPLykfrh dingyousi888@gmail.                       com
+            ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8GraYIQIDVWOkj9W40rMCga5GXbwiAxbW1yYHAPhJNJV4ZqcLYktHBVF6azfhbdLw1r08lbBUUldTEnek7xySobs5sZnaHDPxijAO/AnCFUrD9n30HLkrBgHw                       lcPYYi1B66JoX7SY9NEqn+lBjs11wC4y2ECUsftV5GKXEeKTOGnDMVcjeHrVgT+imhsgq31GucwiFT8f                       N/DepL/S9R5xi/JowfLy/2rDcjOpKGJTaNsSEZ+Zqevg2LCbBRr5dv0eJcqo0GhPVCspZ5nUEn6fZO7Z                       Guq0/MDNCPEosx+UxH3NBnGWwTiaQOuj66gkhHGUjb/BknyilBl6wPLykfrh dingyousi888@gmail.                       com
+        5.$ ssh -T git@github.com
+                Hi yousi2016! You've successfully authenticated, but GitHub does not provide she ll access.    
 
 
         
