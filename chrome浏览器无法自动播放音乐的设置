@@ -1,0 +1,3 @@
+在浏览器输入  chrome://flags/#autoplay-policy 
+
+第一个选项 Autoplay policy  设置为 no user gesture is required
