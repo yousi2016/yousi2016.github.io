@@ -1,0 +1,26 @@
+//回到顶部
+	$(".back_top").hide();//首先将.back_top隐藏
+    $(window).scroll(function() {
+                if ($(window).scrollTop() > 0) {$(".back_top").fadeIn(400);
+                } else { $(".back_top").fadeOut(400); }
+    });//当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失           
+    $(".back_top a").click(function() {
+                $('body,html').animate({scrollTop: 0},200);
+                return false;
+    }); //当点击跳转链接后，回到页面顶部位置
+
+
+    .back_top{
+	_position: absolute;
+	top: 65%;
+	left: 50%;
+	margin-left: 556px;
+	width: 78px;
+	height: 78px;
+	background: url(../images/right.png) no-repeat;
+	cursor: pointer;
+	position: fixed;
+}
+
+
+<div class="back_top"></div>
