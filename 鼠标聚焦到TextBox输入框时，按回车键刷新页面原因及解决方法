@@ -1,0 +1,42 @@
+问题：鼠标聚焦到TextBox输入框时，按回车键刷新页面
+
+原因：当<form></form> 中只有一个TextBox输入框时，当输入完成后，按回车键会自动提交，便刷新了页面
+
+有三种解决办法：
+解决方法：
+
+1、处理form 
+
+在form中添加事件 <form onsubmit="return false;">.......</form>
+
+
+2、增加一个隐藏的输入框,认为改变单个输入框
+
+<input id="hiddenText" type="text" style="display:none" />
+
+
+3、屏蔽回车键
+
+1>  全局去掉回车事件的方法
+function document.onkeydown() {
+        var e = event.srcElement;
+        if (event.keyCode == 13) {
+            return false;
+        }
+    }
+
+2>  去掉输入框的回车事件的方法
+onkeydown="return ClearSubmit(event)"
+
+<input type="text"  onkeydown="return ClearSubmit(event)" />
+
+ function ClearSubmit(e) {
+            if (e.keyCode == 13) {
+                return false;
+            }
+   }
+--------------------- 
+作者：寒色 
+来源：CSDN 
+原文：https://blog.csdn.net/xuezhongsong/article/details/6859037 
+版权声明：本文为博主原创文章，转载请附上博文链接！
