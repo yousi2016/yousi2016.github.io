@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jquery模拟多选框(checkbox)</title>
+    <style>
+        .grow-checked-list{text-align:center;}
+        .grow-checked-list .checkbox_item{position:relative;display:inline-block;margin-right:10px;height:16px;}
+        .checkbox_item input{position:absolute;top:-9999px;left:-9999px;}
+        .checkbox_item .check_label{display:inline-block;cursor:default;}
+        .checkbox_icon{
+        	display:block;
+        	float:left;
+        	margin-right:5px;
+        	border: 1px solid #c8182f;
+    		border-radius: 50%;
+    		-ms-border-radius: 50%;
+    		-webkit-border-radius: 50%;
+    		-o-border-radius: 50%;
+    		-moz-border-radius: 50%;
+        	width:16px;
+        	height:16px;
+        	background: url(images/duitou.png) center no-repeat;
+        }
+        .check_label.on .checkbox_icon{background-position:-16px 0;}
+        .checkbox_text{float:left;height:16px;line-height:19px;font-size: 12px;}
+    </style>
+</head>
+<body>
+<div class="grow-checked-list">
+	<span class="checkbox_item">
+        <input type="checkbox" />
+        <label class="check_label">
+            <i class="checkbox_icon"></i>
+            <span class="checkbox_text">项目三</span>
+        </label>
+    </span>
+</div>
+<script src="https://www.gov.cn/govweb/xhtml/2016gov/js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	;(function($){
+	    $.fn.extend({
+	        checkbox : function(){
+	            return this.each(function(){
+	                var $this = $(this);
+	                if($this.hasClass("on")){
+	                    $this.siblings("input").prop("checked","checked");
+	                }else{
+	                    $this.siblings("input").removeAttr("checked");
+	                }
+	                $this.on("click",function(){
+	                    if($this.hasClass("on")){
+	                        $this.siblings("input").removeAttr("checked");
+	                        $this.removeClass("on");
+	                    }else{
+	                        $this.siblings("input").prop("checked","checked");
+	                        $this.addClass("on");
+	                    }
+	                });    
+	            });
+	        }
+    	});  
+    $(".check_label").checkbox();
+})(jQuery);
+    
+</script>
+</body>
+</html>
