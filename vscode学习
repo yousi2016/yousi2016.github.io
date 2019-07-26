@@ -6,3 +6,6 @@ https://code.visualstudio.com/docs/?dv=win
 快捷键：！tab打开html
 1.下载安装
 2.安装简体中文包，根据右边操作即可，重启即可
+遇到的问题：
+1.每次ctrl+s保存之后，vscode光标自动跑到文档底部
+解决办法： 卸载JS-CS_html formatter
