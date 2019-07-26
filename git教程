@@ -182,7 +182,7 @@
                    1.首先必须在github上创建一个远程库learngit
                    
                    2.将远程库clone到本地：git clone https://github.com/yousi2016/learngit.git
-                   
+                    如果远程库是私有的，那需要输入用户名和密码，共有的就不用了
                    3.然后将项目文件夹放到本地工作区中
                    
                    4.git add .
