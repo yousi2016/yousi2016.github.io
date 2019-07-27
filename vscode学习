@@ -7,5 +7,7 @@ https://code.visualstudio.com/docs/?dv=win
 1.下载安装
 2.安装简体中文包，根据右边操作即可，重启即可
 遇到的问题：
-1.每次ctrl+s保存之后，vscode光标自动跑到文档底部
+3.每次ctrl+s保存之后，vscode光标自动跑到文档底部
 解决办法： 卸载JS-CS_html formatter
+4在vs2010中,突然发现回退键、回车键、方向键等不能用了。
+  然后GOOGLE之，按Alt+Enter，就可以用了
