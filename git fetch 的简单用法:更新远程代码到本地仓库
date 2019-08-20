@@ -1,1 +1,6 @@
 https://www.bbsmax.com/A/l1dyy8ZVde/
+步骤：
+1.git remote add upstream git@github.com:front-end-001/Front-end.git
+2.git fetch upstream 
+3.git checkout master
+4.git merge upstream/master
