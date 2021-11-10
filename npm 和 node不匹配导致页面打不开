@@ -1,0 +1,37 @@
+报错：
+npm WARN npm npm does not support Node.js v16.6.0
+npm WARN npm You should probably upgrade to a newer version of node as we
+npm WARN npm can't make any promises that npm will work with this version.
+npm WARN npm Supported releases of Node.js are the latest release of 6, 8, 9, 10, 11, 12.
+npm WARN npm You can find the latest version at https://nodejs.org/
+
+> vue-sell-cube@0.1.0 serve D:\myFolderDirectory\github\imooc\饿了么\vue-sell-cube
+> vue-cli-service serve
+
+'vue-cli-service' ▒▒▒▒▒ڲ▒▒▒▒ⲿ▒▒▒Ҳ▒▒▒ǿ▒▒▒▒еĳ▒▒▒
+▒▒▒▒▒▒▒▒▒ļ▒▒▒
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! vue-sell-cube@0.1.0 serve: `vue-cli-service serve`
+npm ERR! Exit status 1
+npm ERR!
+npm ERR! Failed at the vue-sell-cube@0.1.0 serve script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+npm WARN Local package.json exists, but node_modules missing, did you mean to install?
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\dingyousi\AppData\Roaming\npm-cache\_logs\2021-11-10T06_46_23_989Z-debug.log
+
+解决办法：
+1.先安装 rimraf 工具
+npm install -g rimraf
+
+2.删除 node_modules 包和 package-lock.json 文件
+rimraf node_modules
+rimraf package-lock.json
+
+3.清除缓存
+npm cache clear --force
+
+4.重新安装依赖包
+npm install
